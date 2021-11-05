@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "cpro";
+  src: url('assets/Quicksand-Light.otf');
+}
+
+body {
+  padding-top: 50px;
+  text-align: center;
+  font-family: "cpro";
+}
+
+h1 {
+  padding-top:20px
+}
+
+.avatar{
+  padding-top: 50px;
+  height: 12em;
+  width: 12em;
+  background: url('assets/MountDiabloWithDJandArlo.jpg')  no-repeat -60px -45px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 300px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.social {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing:30px;
+
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  background-color: #f0ffff;
+  font-family: monospace;
+}
+a:hover {
+  text-decoration: none;
+  background-color: #f0ffff;
+  color: #3f51b5;
+}
+.bio {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.social a {
+  background-color:#f0ffff;
+}
