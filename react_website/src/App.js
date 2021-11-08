@@ -9,9 +9,6 @@ function App() {
   <h1>Hi. I'm Eugene.</h1>
   <div class="objective">
     <p>
-      <span><a href="https://www.youtube.com/watch?v=PMgN6-CUoLQ&ab_channel=EllusionStudio">Welcome.</a></span>
-    </p>
-    <p>
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
