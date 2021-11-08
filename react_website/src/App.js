@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Planet } from 'react-planet';
+import pdf from './assets/eugene_brodsky_resume.pdf';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
-      <span>Here is my <a download href='eugene_brodsky_resume.pdf'>resume.</a></span>
+      <span>Here is my <a download href={ pdf } target= '_blank'>resume.</a></span>
     </p>
   </div>
 
