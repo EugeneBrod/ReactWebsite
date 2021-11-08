@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import { Planet } from 'react-planet';
 import pdf from './assets/eugene_brodsky_resume.pdf';
 
 function App() {
   return (
-    <body>
+  <body>
   <div class="avatar"></div>
   <h1>Hi. I'm Eugene.</h1>
   <div class="objective">
