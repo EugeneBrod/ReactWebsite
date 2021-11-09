@@ -25,8 +25,8 @@ function App() {
         centerContent={
           <div
             style={{
-              height: 100,
-              width: 100,
+              height: 75,
+              width: 75,
               borderRadius: '50%',
               backgroundColor: '#c7fffd',
               position: 'absolute', left: '50%', top: '50%',
@@ -43,10 +43,9 @@ function App() {
           </div>
         }
         dragablePlanet
-        open
         autoClose
-        orbitRadius={150}
-        rotation={90}
+        orbitRadius={100}
+        rotation={270}
         
       >
         <div></div>
@@ -55,8 +54,8 @@ function App() {
         <div></div>
         <div
           style={{
-            height: 70,
-            width: 70,
+            height: 45,
+            width: 45,
             borderRadius: '50%',
             backgroundColor: '#eabdff',
           }}
@@ -75,8 +74,8 @@ function App() {
         </div>
         <div
           style={{
-            height: 70,
-            width: 70,
+            height: 45,
+            width: 45,
             borderRadius: '50%',
             backgroundColor: '#eabdff',
           }}
@@ -95,8 +94,8 @@ function App() {
         </div>
         <div
           style={{
-            height: 70,
-            width: 70,
+            height: 45,
+            width: 45,
             borderRadius: '50%',
             backgroundColor: '#eabdff',
           }}
@@ -115,8 +114,8 @@ function App() {
         </div>
         <div
           style={{
-            height: 70,
-            width: 70,
+            height: 45,
+            width: 45,
             borderRadius: '50%',
             backgroundColor: '#eabdff',
           }}
