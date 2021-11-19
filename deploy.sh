@@ -1,5 +1,5 @@
 echo "What's your commit message?"
-read $msg
+read msg
 cd react_website
 npm run build
 cd ..
