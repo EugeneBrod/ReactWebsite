@@ -4,6 +4,6 @@ cd react_website
 npm run build
 cd ..
 git add -A
-git commit -m $msg
+git commit -m "$msg"
 git push origin master
 firebase deploy
