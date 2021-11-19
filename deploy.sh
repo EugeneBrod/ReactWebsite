@@ -1,11 +1,9 @@
-if [ $# -eq 0 ]; then
-  echo "Must provide commit message"
-  exit 1
-fi
+echo "What's your commit message?"
+read $msg
 cd react_website
 npm run build
 cd ..
 git add -A
-git commit -m "$1"
+git commit -m $msg
 git push origin master
 firebase deploy
