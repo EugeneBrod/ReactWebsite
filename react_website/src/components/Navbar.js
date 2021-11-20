@@ -5,10 +5,12 @@ function Navbar() {
   return (
     <div className='Navbar'>
       <table>
-        <tr>
-          <td><Link to='/'>Home</Link></td>
-          <td><Link to='/cScraper'>cScraper</Link></td>
-        </tr>
+        <tbody>
+          <tr>
+            <td><Link to='/'>Home</Link></td>
+            <td><Link to='/cScraper'>cScraper</Link></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );

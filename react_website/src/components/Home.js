@@ -5,22 +5,22 @@ import {Link} from 'react-router-dom';
 
 function Home() {
   return (
-  <body>
-  <div class="avatar"></div>
+  <div className="Home">
+  <div className="avatar"></div>
   <h1>Hi. I'm Eugene.</h1>
-  <div class="objective">
+  <div className="objective">
     <p>
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
-      <span>Here is my <a download href={ pdf } target= '_blank'>resume.</a></span>
+      <span>Here is my <a download href={ pdf } rel="noreferrer" target= '_blank'>resume.</a></span>
     </p>
     <p>
       <span>Here is my <Link to='/cScraper'>cScraper.</Link></span>
     </p>
   </div>
 
-  <div class="planets">
+  <div className="planets">
     <Planet
         orbitStyle={defaultStyle => ({
           ...defaultStyle,
@@ -71,7 +71,7 @@ function Home() {
             >
               <a href="https://github.com/EugeneBrod">
                 <div>
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                 </div>
               </a>
             </div>
@@ -91,7 +91,7 @@ function Home() {
             >
               <a href="https://www.linkedin.com/in/eugene-brodsky-a78759148/">
                 <div>
-                  <i class="fab fa-linkedin-in"></i>
+                  <i className="fab fa-linkedin-in"></i>
                 </div>
               </a>
             </div>
@@ -111,7 +111,7 @@ function Home() {
             >
               <a href="https://www.instagram.com/eugenebrod.sky/">
                 <div>
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </div>
               </a>
             </div>
@@ -131,14 +131,14 @@ function Home() {
             >
               <a href="mailto:eugenebrod@eugenebrodsky.me">
                 <div>
-                  <i class="fas fa-envelope"></i>
+                  <i className="fas fa-envelope"></i>
                 </div>
               </a>
             </div>
         </div>
       </Planet>
   </div>
-</body>
+</div>
   );
 }
 
