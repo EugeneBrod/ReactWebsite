@@ -4,6 +4,7 @@
 }
 
 html, body, #root, #root>div {
+  padding-top: 20px;
   margin: 0;
   background-color:#FFFFFF;
   width:100%;

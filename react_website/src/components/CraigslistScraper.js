@@ -70,8 +70,10 @@ export class CraigslistScraper extends Component {
   render() {
     return (
       <div className="CraigslistScraper">
-        <p>This is an interface to the Craigslist Scraper that I have build. As of right now, it supports one user at a time.</p>
-        <p>This will change really soon. Stay tuned!</p>
+        <br/>
+        <p>This is an interface to the Craigslist Scraper that I have built.</p>
+        <p>I was hosting the scraper at home, but I will dockerize it and host it really soon.</p>
+        <br/>
         <h1>How to use:</h1>
         <p>In the left box, input the Craigslist URLs that you want to scrape, separated by commas or spaces.</p>
         <p>In the right box, input the email addresses you would like to be notified when new posts are available.</p>

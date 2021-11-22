@@ -9,5 +9,9 @@
 .Navbar table {
   width: 150px;
   position: relative;
-  left: 75px;
+  margin: auto;
+}
+
+td {
+  padding: 20px;
 }

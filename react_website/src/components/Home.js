@@ -15,9 +15,6 @@ function Home() {
     <p>
       <span>Here is my <a download href={ pdf } rel="noreferrer" target= '_blank'>resume.</a></span>
     </p>
-    <p>
-      <span>Here is my <Link to='/cScraper'>cScraper.</Link></span>
-    </p>
   </div>
 
   <div className="planets">

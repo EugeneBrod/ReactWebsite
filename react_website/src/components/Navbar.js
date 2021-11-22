@@ -7,8 +7,9 @@ function Navbar() {
       <table>
         <tbody>
           <tr>
-            <td><Link to='/'>Home</Link></td>
+            <td><Link to='/'>About</Link></td>
             <td><Link to='/cScraper'>cScraper</Link></td>
+            <td><Link to='/yRatio'>yRatio</Link></td>
           </tr>
         </tbody>
       </table>
