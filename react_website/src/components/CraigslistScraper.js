@@ -12,7 +12,6 @@ export class CraigslistScraper extends Component {
     }
     this.targetURLsHandler = this.targetURLsHandler.bind(this)
     this.recipientListHandler = this.recipientListHandler.bind(this)
-    this.setSettingsButtonHandler = this.setSettingsButtonHandler.bind(this)
     this.startButtonHandler = this.startButtonHandler.bind(this)
     this.stopButtonHandler = this.stopButtonHandler.bind(this)
 
@@ -27,7 +26,7 @@ export class CraigslistScraper extends Component {
     this.setState({recipientList: e.target.value})
   }
 
-  setSettingsButtonHandler(event) {
+  startButtonHandler(event) {
     const path = 'http://localhost:5000/setSettings';
     const payload = {
       recipient_emails: this.state.recipientList.split(/[ ,]+/),
@@ -37,33 +36,34 @@ export class CraigslistScraper extends Component {
     axios.post(path, payload)
       .then((res) => {
         console.log(res.data.success);
+        const path = 'http://localhost:5000/start';
+        axios.get(path)
+          .then((res) => {
+            console.log(res.data.success);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       })
       .catch((error) => {
         console.log(error);
-      });
-  }
-
-  startButtonHandler(event) {
-    const path = 'http://localhost:5000/start';
-    axios.get(path)
-      .then((res) => {
-        console.log(res.data.success);
-      })
-      .catch((error) => {
-        console.error(error);
       });
   }
 
   stopButtonHandler(event) {
     const path = 'http://localhost:5000/stop';
     this.occupied = false;
+    console.log("hello")
     axios.get(path)
       .then((res) => {
         console.log(res.data.success);
+        console.log("yes")
       })
       .catch((error) => {
+        console.log("no")
         console.log(error);
       });
+    console.log("bye")
   }
   
 
@@ -80,7 +80,6 @@ export class CraigslistScraper extends Component {
         <input className="targetURLs" type="text" onChange={(e) => this.targetURLsHandler(e)} placeholder="URLs to scrape."></input>
         <input className="recipientList" type="text" onChange={(e) => this.recipientListHandler(e)} placeholder="recipients to notify of new posts"></input>
         <div>{this.state.counter}</div>
-        <button className="setSettingsButton" onClick={this.setSettingsButtonHandler}>Set these settings.</button>
         <button className="startButton" onClick={this.startButtonHandler}>Start</button>
         <button className="stopButton" onClick={this.stopButtonHandler}>Stop</button>
       </div>
