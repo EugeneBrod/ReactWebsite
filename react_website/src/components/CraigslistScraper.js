@@ -2,6 +2,8 @@ import './CraigslistScraper.css';
 import React, { Component } from "react";
 import axios from 'axios';
 
+const BASEURL = "https://cscraper-jzmexnpjzq-uc.a.run.app"
+
 export class CraigslistScraper extends Component {
 
   constructor(props) {
@@ -27,7 +29,7 @@ export class CraigslistScraper extends Component {
   }
 
   startButtonHandler(event) {
-    const path = 'http://localhost:5000/setSettings';
+    const path = BASEURL + '/setSettings';
     const payload = {
       recipient_emails: this.state.recipientList.split(/[ ,]+/),
       urls: this.state.targetURLs.split(/[ ,]+/),
@@ -36,7 +38,7 @@ export class CraigslistScraper extends Component {
     axios.post(path, payload)
       .then((res) => {
         console.log(res.data.success);
-        const path = 'http://localhost:5000/start';
+        const path = BASEURL + '/start';
         axios.get(path)
           .then((res) => {
             console.log(res.data.success);
@@ -51,7 +53,7 @@ export class CraigslistScraper extends Component {
   }
 
   stopButtonHandler(event) {
-    const path = 'http://localhost:5000/stop';
+    const path = BASEURL + '/stop';
     this.occupied = false;
     console.log("hello")
     axios.get(path)
