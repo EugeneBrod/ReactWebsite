@@ -10,7 +10,8 @@ export class CraigslistScraper extends Component {
     super(props);
     this.state = {
       targetURLs: "",
-      recipientList: ""
+      recipientList: "",
+      msg: ""
     }
     this.targetURLsHandler = this.targetURLsHandler.bind(this)
     this.recipientListHandler = this.recipientListHandler.bind(this)
@@ -37,35 +38,45 @@ export class CraigslistScraper extends Component {
     console.log(payload)
     axios.post(path, payload)
       .then((res) => {
-        console.log(res.data.success);
-        const path = BASEURL + '/start';
-        axios.get(path)
-          .then((res) => {
-            console.log(res.data.success);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+        if (res.data.success) {
+          const path = BASEURL + '/start';
+          axios.get(path)
+            .then((res) => {
+              if (res.data.success) {
+                this.setState({msg: "Launched Scraper"})
+              } else {
+                this.setState({msg: "Scraper already in use."})
+
+              }
+            })
+            .catch((error) => {
+              this.setState({msg: "Something went wrong."})
+            });
+        } else {
+          this.setState({msg: "Something went wrong"})
+        }
+        
       })
       .catch((error) => {
         console.log(error);
+        this.setState({msg: "Something went wrong."})
       });
   }
 
   stopButtonHandler(event) {
     const path = BASEURL + '/stop';
     this.occupied = false;
-    console.log("hello")
     axios.get(path)
       .then((res) => {
-        console.log(res.data.success);
-        console.log("yes")
+        if (res.data.success) {
+          this.setState({msg: "Stopped scraper"})
+        } else {
+          this.setState({msg: "Scraper not running yet."})
+        }
       })
       .catch((error) => {
-        console.log("no")
-        console.log(error);
+        this.setState({msg: "Something went wrong."})
       });
-    console.log("bye")
   }
   
 
@@ -74,18 +85,19 @@ export class CraigslistScraper extends Component {
       <div className="CraigslistScraper">
         <br/>
         <p>This is an interface to the Craigslist Scraper that I have built.</p>
-        <p>I was hosting the scraper at home, but I will dockerize it and host it really soon.</p>
+        <p>It's been dockerized to run on Google's Cloud Run.</p>
         <br/>
-        <h1>How to use:</h1>
-        <p>In the left box, input the Craigslist URLs that you want to scrape, separated by commas or spaces.</p>
-        <p>In the right box, input the email addresses you would like to be notified when new posts are available.</p>
         <p>If you do not recieve an email right away, try pressing the stop button. This will kick out the current user of the scraper.</p>
         <p>Survival of the most persistent I suppose.</p>
+        <br/>
+        <p>EXAMPLE:</p>
+        <p>left box: https://sfbay.craigslist.org/d/for-sale/search/sss, https://sfbay.craigslist.org/search/ata?purveyor-input=all&max_price=2000</p>
+        <p>right box: some_email@gmail.com, another_email@gmail.com</p>
         <input className="targetURLs" type="text" onChange={(e) => this.targetURLsHandler(e)} placeholder="URLs to scrape."></input>
         <input className="recipientList" type="text" onChange={(e) => this.recipientListHandler(e)} placeholder="recipients to notify of new posts"></input>
-        <div>{this.state.counter}</div>
         <button className="startButton" onClick={this.startButtonHandler}>Start</button>
         <button className="stopButton" onClick={this.stopButtonHandler}>Stop</button>
+        <p className="ErrorMsg">{ this.state.msg }</p>
       </div>
     );
   }
