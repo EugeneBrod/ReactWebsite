@@ -12,11 +12,11 @@ export class Horse extends Component {
     return (
       <div className="Horse">
         <p>This project aims to connect people that want to play Horse in any context, ie. skateboarding or basketball.</p>
-        <img src={ pic_1 } />
-        <img src={ pic_2 } />
-        <img src={ pic_3 } />
-        <img src={ pic_4 } />
-        <img src={ pic_5 } />
+        <img src={ pic_1 } alt="pic_1"/>
+        <img src={ pic_2 } alt="pic_2"/>
+        <img src={ pic_3 } alt="pic_3"/>
+        <img src={ pic_4 } alt="pic_4"/>
+        <img src={ pic_5 } alt="pic_5"/>
       </div>
     );
   }
