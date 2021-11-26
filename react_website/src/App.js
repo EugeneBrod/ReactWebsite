@@ -5,6 +5,8 @@ import { CraigslistScraper } from './components/CraigslistScraper';
 import Navbar from './components/Navbar';
 import {Route, Routes} from 'react-router-dom';
 import { YRatio } from './components/yRatio';
+import { SkaDice } from './components/SkaDice';
+import { Horse } from './components/Horse';
 
 
 
@@ -16,6 +18,8 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/cScraper' element={<CraigslistScraper/>} />
         <Route exact path='/yRatio' element={<YRatio/>} />
+        <Route exact path='/SkaDice' element={<SkaDice/>} />
+        <Route exact path='/Horse' element={<Horse/>} />
       </Routes>
     </div>
   );

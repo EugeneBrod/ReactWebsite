@@ -13,7 +13,7 @@ function Home() {
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
-      <span>Here is my <a download href={ pdf } rel="noreferrer" target= '_blank'>resume.</a></span>
+      <span>Here's my <a download href={ pdf } rel="noreferrer" target= '_blank'>resume.</a></span>
     </p>
   </div>
 
