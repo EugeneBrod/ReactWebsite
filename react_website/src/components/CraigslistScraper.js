@@ -103,7 +103,6 @@ export class CraigslistScraper extends Component {
         <input className="targetURLs" type="text" onChange={(e) => this.targetURLsHandler(e)} placeholder="URLs to scrape."></input>
         <input className="recipientList" type="text" onChange={(e) => this.recipientListHandler(e)} placeholder="recipients to notify of new posts"></input>
         <button className="startButton" onClick={this.startButtonHandler}>Start</button>
-        {/* <button className="stopButton" onClick={this.stopButtonHandler}>Stop</button> */}
         <p className="ErrorMsg">{ this.state.msg }</p>
       </div>
     );
