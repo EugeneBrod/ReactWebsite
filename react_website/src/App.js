@@ -13,6 +13,7 @@ import { Horse } from './components/Horse';
 function App() {
   return (
     <div className="App">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />

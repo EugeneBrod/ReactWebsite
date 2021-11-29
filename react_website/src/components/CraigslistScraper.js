@@ -97,8 +97,12 @@ export class CraigslistScraper extends Component {
         <p>This is an interface to the Craigslist Scraper that I have built.</p>
         <p>It's been dockerized to run on Google's Cloud Run.</p>
         <br/>
-        <p>Input your email below and see it work for you!</p>
-        <input className="targetURLs" type="text" onChange={(e) => this.targetURLsHandler(e)} placeholder="URLs to scrape.">https://sfbay.craigslist.org/d/for-sale/search/sss</input>
+        <p>In the left box, input urls such as these (feel free to copy paste the url below </p>
+        <p> https://sfbay.craigslist.org/d/for-sale/search/sss, https://sfbay.craigslist.org/search/ata?purveyor-input=all&max_price=2000 </p>
+        <p>In the right box, input your email below and see it work for you!</p>
+        <br/>
+        <br/>
+        <input className="targetURLs" type="text" onChange={(e) => this.targetURLsHandler(e)} placeholder="URLs to scrape."></input>
         <input className="recipientList" type="text" onChange={(e) => this.recipientListHandler(e)} placeholder="enter your email address!"></input>
         <button className="startButton" onClick={this.startButtonHandler}>Start</button>
         <p className="ErrorMsg">{ this.state.msg }</p>
