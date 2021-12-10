@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/cScraper' element={<CraigslistScraper/>} />
-        <Route exact path='/yRatio' element={<YRatio/>} />
+        <Route exact path='/YoutubeRatio' element={<YRatio/>} />
         <Route exact path='/SkaDice' element={<SkaDice/>} />
         <Route exact path='/Horse' element={<Horse/>} />
       </Routes>

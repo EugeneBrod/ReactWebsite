@@ -9,7 +9,7 @@ function Navbar() {
           <tr>
             <td><Link to='/'>About</Link></td>
             <td><Link to='/cScraper'>cScraper</Link></td>
-            <td><Link to='/yRatio'>yRatio</Link></td>
+            <td><Link to='/YoutubeRatio'>YoutubeRatio</Link></td>
             <td><Link to='/Horse'>Horse</Link></td>
             <td><Link to='/SkaDice'>SkaDice</Link></td>
           </tr>
