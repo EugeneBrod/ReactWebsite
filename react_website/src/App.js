@@ -7,6 +7,7 @@ import {Route, Routes} from 'react-router-dom';
 import { YRatio } from './components/yRatio';
 import { SkaDice } from './components/SkaDice';
 import { Horse } from './components/Horse';
+import { HomeV2 } from './components/HomeV2';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/YoutubeRatio' element={<YRatio/>} />
         <Route exact path='/SkaDice' element={<SkaDice/>} />
         <Route exact path='/Horse' element={<Horse/>} />
+        <Route exact path='/HomeV2' element={<HomeV2/>} />
       </Routes>
     </div>
   );

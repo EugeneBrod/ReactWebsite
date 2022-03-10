@@ -12,6 +12,7 @@ function Navbar() {
             <td><Link to='/YoutubeRatio'>YoutubeRatio</Link></td>
             <td><Link to='/Horse'>Horse</Link></td>
             <td><Link to='/SkaDice'>SkaDice</Link></td>
+            <td><Link to='/HomeV2'>HomeV2</Link></td>
           </tr>
         </tbody>
       </table>
