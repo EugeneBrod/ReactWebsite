@@ -13,6 +13,15 @@ function Home() {
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
+    <span>I'm currently a software development engineer intern at <a href="http://www.kineticreality.com/">Kinetic Reality.</a> I work on developing our cloud and embedded systems.</span>
+    </p>
+    <p>
+    <span>We're building the world's most affordable full body motion capture system with applications in animation, sports, and gaming.</span>
+    </p>
+    <p>
+      <span>**********************************************************************************************************</span>
+    </p>
+    <p>
       <span>Here's my <a download href={ pdf } rel="noreferrer" target= '_blank'>resume.</a></span>
     </p>
   </div>

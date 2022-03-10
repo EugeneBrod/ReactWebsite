@@ -22,7 +22,7 @@ function App() {
         <Route exact path='/YoutubeRatio' element={<YRatio/>} />
         <Route exact path='/SkaDice' element={<SkaDice/>} />
         <Route exact path='/Horse' element={<Horse/>} />
-        <Route exact path='/HomeV2' element={<HomeV2/>} />
+        <Route exact path='/TestPage' element={<HomeV2/>} />
       </Routes>
     </div>
   );
