@@ -13,10 +13,7 @@ function Home() {
     <span>I studied math and cs at <a href="https://www.berkeley.edu/">UC Berkeley.</a></span>
     </p>
     <p>
-    <span>I'm an embedded firmware engineer at <a href="http://www.metasense.io/">MetaSense.</a> I develop our cloud and embedded systems.</span>
-    </p>
-    <p>
-    <span>We're building the world's most affordable full body motion capture system with applications in animation, sports, and gaming.</span>
+    <span>I'm a firmware engineer for <a href="http://www.metasense.io/">MetaSense.</a> I develop our cloud and embedded systems.</span>
     </p>
     <p>
       <span>**********************************************************************************************************</span>

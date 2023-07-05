@@ -8,8 +8,6 @@ function Navbar() {
         <tbody>
           <tr>
             <td><Link to='/'>About</Link></td>
-            <td><Link to='/cScraper'>cScraper</Link></td>
-            <td><Link to='/YoutubeRatio'>YoutubeRatio</Link></td>
           </tr>
         </tbody>
       </table>
